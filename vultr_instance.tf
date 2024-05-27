@@ -6,8 +6,22 @@
 
 resource "vultr_instance" "instance_01" {
   label = "prefix-username-server" #Label as you want
+  tags = ["test_instance"]
   plan = "vc2-1c-1gb" #5 USD/mo
   region = "scl" #Chile - Santiago
   os_id = "1743" #Ubuntu 22.04 LTS x64
+  hostname = "prefix-username"
   enable_ipv6 = true
+  disable_public_ipv4 = false
+  ssh_key_ids = var.VULTR_INSTANCE_SSH_KEYS
+  firewall_group_id = vultr_firewall_group.firewall_group_01.id
+  script_id = vultr_startup_script.startup_script.id
+  backups = "disabled" #Billed Service, uncomment schedule if "enabled"
+  #backups_schedule {
+  #  type = "daily"
+  #}
+  ddos_protection = false #Billed Service
+  activation_email = false
 }
+
+variable "VULTR_INSTANCE_SSH_KEYS" {}

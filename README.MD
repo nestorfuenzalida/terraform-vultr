@@ -45,6 +45,22 @@ input ***yes*** when prompted
 
 ## Change Log
 
+### v1.1
+
+- Readme Formatting Fix
+- Additional attributes included to the instance template
+    - Tags
+    - Hostname
+    - IPv4 toggle
+    - Backups toggle (Billed)
+    - DDoS protection toggle (Billed)
+    - Activation Email notification toggle
+    - Startup Script
+  
+- Added Firewall Group and Rules
+- Added SSH Key configuration (Key UUID needed from Vultr)
+- Added Startup Script Folder/File example
+
 ### v1.0
 
 *Using Vultr Terraform Provider V2.19.0*
@@ -63,6 +79,7 @@ input ***yes*** when prompted
 ### Useful Links
 - [Vultr Terraform Documentation](https://docs.vultr.com/how-to-provision-cloud-infrastructure-on-vultr-using-terraform)
 - [Vultr Terraform Provider](https://github.com/vultr/terraform-provider-vultr)
+- [Vultr Terraform Provider Docs](https://registry.terraform.io/providers/vultr/vultr/latest/docs)
 - [Vultr Instance List with Regions](https://www.vultr.com/api/#tag/plans/operation/list-plans)
 - [Vultr OS List](https://www.vultr.com/api/#tag/os/operation/list-os)
 
