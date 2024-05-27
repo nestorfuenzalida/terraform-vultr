@@ -43,9 +43,9 @@ terraform destroy -var-file="env.tfvars"
 
 input ***yes*** when prompted
 
-##Change Log
+## Change Log
 
-###v1.0
+### v1.0
 
 *Using Vultr Terraform Provider V2.19.0*
 
