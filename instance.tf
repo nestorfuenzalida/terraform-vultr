@@ -14,7 +14,7 @@ resource "vultr_instance" "instance_01" {
   enable_ipv6 = true
   disable_public_ipv4 = false
   ssh_key_ids = var.VULTR_INSTANCE_SSH_KEYS
-  firewall_group_id = vultr_firewall_group.firewall_group_01.id
+  firewall_group_id = vultr_firewall_group.firewall_group.id
   script_id = vultr_startup_script.startup_script.id
   backups = "disabled" #Billed Service, uncomment schedule if "enabled"
   #backups_schedule {
@@ -23,5 +23,3 @@ resource "vultr_instance" "instance_01" {
   ddos_protection = false #Billed Service
   activation_email = false
 }
-
-variable "VULTR_INSTANCE_SSH_KEYS" {}
