@@ -20,6 +20,25 @@ variable "VULTR_INSTANCE_SSH_KEYS" {
 variable "STARTUP_SCRIPT" {
   type = string
 }
-variable "DOMAIN" {
-  type = string
+variable "FIREWALL_RULES" {
+  type = list(object({
+    protocol = string
+    ip_type = string
+    port = number
+    notes = string
+  }))
+  default = [
+    {
+      protocol = "tcp"
+      ip_type = "v4"
+      port = "22"
+      notes = "SSH access"
+    },
+    {
+      protocol = "tcp"
+      ip_type = "v4"
+      port = "80"
+      notes = "HTTP access"
+    }
+  ]
 }
