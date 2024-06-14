@@ -8,19 +8,7 @@ variable "VULTR_API_KEY" {
   sensitive = true
   type = string
 }
-variable "SUBNET" {
-  type = string
-}
-variable "SUBNET_SIZE" {
-  type = number
-}
-variable "VULTR_INSTANCE_SSH_KEYS" {
-  type = any
-}
-variable "HOSTNAME" {
-  type = string
-}
-variable "STARTUP_SCRIPT" {
+variable "IP_ADDRESS" {
   type = string
 }
 variable "DOMAIN" {
