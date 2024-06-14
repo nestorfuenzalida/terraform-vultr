@@ -20,6 +20,9 @@ variable "VULTR_INSTANCE_SSH_KEYS" {
 variable "STARTUP_SCRIPT" {
   type = string
 }
+variable "HOSTNAME" {
+  type = string
+}
 variable "FIREWALL_RULES" {
   type = list(object({
     protocol = string

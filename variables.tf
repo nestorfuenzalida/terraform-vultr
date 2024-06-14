@@ -17,6 +17,9 @@ variable "SUBNET_SIZE" {
 variable "VULTR_INSTANCE_SSH_KEYS" {
   type = any
 }
+variable "HOSTNAME" {
+  type = string
+}
 variable "STARTUP_SCRIPT" {
   type = string
 }
