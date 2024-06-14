@@ -4,6 +4,7 @@
 #This source code is licensed under the MIT-style license found in the
 #LICENSE file in the root directory of this source tree.
 
+/*
 resource "vultr_firewall_rule" "firewall_rule" {
   firewall_group_id = vultr_firewall_group.firewall_group.id
   subnet = var.SUBNET
@@ -16,4 +17,4 @@ resource "vultr_firewall_rule" "firewall_rule" {
     for index, rule in var.FIREWALL_RULES:
     rule.port => rule
   }
-}
+}*/
