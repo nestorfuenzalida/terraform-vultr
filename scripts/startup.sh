@@ -2,10 +2,8 @@
 
 apt update -y && apt upgrade -y && apt autoremove && apt clean
 apt-get install ufw -y && apt-get install gnupg2 -y && apt-get install zsh -y
-#curl -sSL https://rvm.io/mpapis.asc | gpg --import
-#curl -sSL https://get.rvm.io | bash
-apt-get install rvm
-sudo usermod -a -G rvm "$USER"
+curl -sSL https://rvm.io/mpapis.asc | gpg --import
+curl -sSL https://get.rvm.io | bash
 . /etc/profile.d/rvm.sh
 rvm install ruby-3.1.0
 rvm use ruby-3.1.0 --default
